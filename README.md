@@ -9,7 +9,7 @@ database system to store and manage scraped data efficiently.
 • Implemented a cosine similarity algorithm to build a content-based recommendation system that suggests relevant video content based on the topic of the tweet. Utilized Power
 BI to create interactive dashboard, visualization key insights and improving decision making for content recommendation. This system enhanced user experience by helping them
 discover relevant and engaging video content on Twitter (X platform)
-[Github Repository](https://github.com/93san/project_data_mining)
+## [Github Repository](https://github.com/93san/project_data_mining)
 ### project 2 
 Description
 links
