@@ -41,6 +41,10 @@
       max-height: 200px;
       object-fit: cover;
       border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+    .project img:hover {
+      transform: scale(1.03);
     }
     .project-title {
       font-size: 1.2rem;
@@ -57,6 +61,10 @@
       background: #35495e;
       color: white;
       margin-top: 2rem;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
     }
   </style>
 </head>
@@ -75,31 +83,39 @@
     <h2>Projects</h2>
 
     <div class="project">
-      <img src="images/travel_ai.jpg" alt="Travel App AI">
-      <div class="project-title">Travel App using Generative AI</div>
-      <div class="project-tech">AWS Bedrock, Django, PyLint, Prompt Engineering</div>
-      <p>Integrated AWS Bedrock to provide personalized travel suggestions based on user inputs and reviews. Used S3 for data storage and Django for app logic.</p>
+      <a href="travel-ai.html">
+        <img src="images/travel_ai.jpg" alt="Travel App AI">
+        <div class="project-title">Travel App using Generative AI</div>
+        <div class="project-tech">AWS Bedrock, Django, PyLint, Prompt Engineering</div>
+        <p>Click to view more about how I used AWS Bedrock and Django to build an intelligent travel planner.</p>
+      </a>
     </div>
 
     <div class="project">
-      <img src="images/s3_simulator.jpg" alt="S3 Simulator">
-      <div class="project-title">Simulated AWS S3 GetObject API</div>
-      <div class="project-tech">Java, NetBeans IDE, TCP/IP</div>
-      <p>Built a REST API simulating AWS S3’s partial object retrieval using byte range parameters. Supported both local and remote files.</p>
+      <a href="s3-simulator.html">
+        <img src="images/s3_simulator.jpg" alt="S3 Simulator">
+        <div class="project-title">Simulated AWS S3 GetObject API</div>
+        <div class="project-tech">Java, NetBeans IDE, TCP/IP</div>
+        <p>Click to explore my simulated REST API for file serving and partial data retrieval like AWS S3.</p>
+      </a>
     </div>
 
     <div class="project">
-      <img src="images/youtube_reco.jpg" alt="YouTube Recommendation System">
-      <div class="project-title">YouTube Recommendation System using Twitter API</div>
-      <div class="project-tech">Python, R Studio, TF-IDF, Power BI</div>
-      <p>Used scraped tweets and video metadata to build a content recommendation system using cosine similarity and TF-IDF vectorization.</p>
+      <a href="youtube-recommendation.html">
+        <img src="docs/assets/youtube.jpg" alt="YouTube Recommendation System">
+        <div class="project-title">YouTube Recommendation System using Twitter API</div>
+        <div class="project-tech">Python, R Studio, TF-IDF, Power BI</div>
+        <p>Click to learn how I built a content recommendation system using Twitter data and TF-IDF.</p>
+      </a>
     </div>
 
     <div class="project">
-      <img src="images/video_encryption.jpg" alt="Video Encryption">
-      <div class="project-title">Video Encryption using Fisher-Yates Algorithm</div>
-      <div class="project-tech">Java, XOR, Steganography</div>
-      <p>Encrypted video frames using Fisher-Yates shuffling and XOR encryption for enhanced video security and reliable reconstruction.</p>
+      <a href="video-encryption.html">
+        <img src="images/video_encryption.jpg" alt="Video Encryption">
+        <div class="project-title">Video Encryption using Fisher-Yates Algorithm</div>
+        <div class="project-tech">Java, XOR, Steganography</div>
+        <p>Click to dive into my video steganography system using Fisher-Yates and XOR encryption.</p>
+      </a>
     </div>
   </section>
 
