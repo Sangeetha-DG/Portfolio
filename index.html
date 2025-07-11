@@ -113,76 +113,73 @@
     object-fit: contain;
   }
        
-.progress-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.education-section {
+  padding: 20px;
+}
+
+.edu-timeline {
   position: relative;
+  margin-left: 20px;
+  border-left: 2px solid #ccc;
 }
 
-.progress-step {
+.edu-row {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-icon {
+  position: relative;
+  width: 40px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.progress-circle {
-  width: 28px;
-  height: 28px;
+.circle {
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background-color: #ccc;
   color: white;
+  font-size: 14px;
   font-weight: bold;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: 1;
 }
 
-.progress-circle.active {
-  background-color: #9ABDDC;
+.circle.active {
+  background-color: #306998;
 }
 
-.progress-line {
-  width: 4px;
-  height: 60px;
+.line {
+  width: 2px;
+  flex-grow: 1;
   background-color: #ccc;
-  margin: 4px 0;
+  margin-top: 4px;
 }
 
-.progress-line.active {
-  background-color: #9ABDDC;
-}
-
-.progress-label {
-  font-size: 12px;
-  margin-top: 6px;
-  text-align: center;
-  font-weight: 500;
-  color: #333;
-}
-
-.education-details {
+.edu-content {
+  padding-left: 20px;
   flex: 1;
 }
 
-.education-details h4 {
-  margin-bottom: 4px;
+.edu-content h4 {
+  margin-top: 0;
   font-size: 18px;
 }
 
-.resume-item {
-  margin-bottom: 40px;
-}
-
-.timeline-item .content ul {
-  padding-left: 20px;
+.edu-content ul {
   margin: 0;
-}
-
-.timeline-item .content ul li {
+  padding-left: 20px;
   list-style-type: disc;
 }
+
 
 
 
@@ -247,62 +244,66 @@
           </div>  
        </div>
     </section><!-- End Skills Section -->
-    <div class="education-section" style="display: flex; gap: 40px; align-items: flex-start;">
-    <div class="progress-container">
-    <div class="progress-step">
-      <div class="progress-circle active"></div>
-      <div class="progress-label"></div>
-    </div>
-    <div class="progress-line active"></div>
-    <div class="progress-step">
-      <div class="progress-circle active"></div>
-      <div class="progress-label"></div>
-    </div>
-  </div>
-  <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
-           <h2>Education</h2>
-            <div class="resume-item">
-             
-                <div class="timeline-item">
-                  <div class="content">
-                    <h4> MASTER OF SCIENCE, COMPUTER SCIENCE </h4>
-                   <span class="tag-cloud"> GPA : 3.8, Jan 2022 - Dec 2023</span>
-                    <p><em><b> New Jersey Institute of Technology</b> NJ, USA</em></p>
-                   <li>  Database management system,
-                        Data Structure and algorithm,
-                        Machine Learning,
-                        Operating System,
-                        Computer Networking,
-                        Data Mining,
-                        Introduction to BigData,</li>
-                  </div>
-                </div>
-                
-                
-                
-          </p>
-            </div>
-             <div class="resume-item">
-               <div class="timeline-item">
-                  <div class="content">
+   <div class="education-section">
+  <h2>Education</h2>
 
-                    <h4> BACHELOR OF ENGINEERING,  COMPUTER SCIENCE </h4>
-                  <span class="tag-cloud"> GPA : 7.1, June 2011 - July 2015 </span>
-                    <p><em><b> Jain Institute of Technology </b> Karnataka, India</em></p>
-                    <li>Database management system,
-                      Data Structure and algorithm,
-                      Machine Learning,
-                      Operating System,
-                      Computer Networking,
-                      Graph theory 
-                      Computer organization
-                      Compiler Design</li>
-                  </div>
-               </div>
-             </div>
-              
-             <!-- <div class="col-lg-12" data-aos="fade-up"> -->
+  <!-- Timeline with Entries -->
+  <div class="edu-timeline">
+
+    <!-- Item 1: Master's -->
+    <div class="edu-row">
+      <!-- Circle -->
+      <div class="timeline-icon">
+        <div class="circle active">1</div>
+        <div class="line"></div>
+      </div>
+
+      <!-- Details -->
+      <div class="edu-content">
+        <h4>MASTER OF SCIENCE, COMPUTER SCIENCE</h4>
+        <span class="tag-cloud">GPA : 3.8, Jan 2022 - Dec 2023</span>
+        <p><em><b>New Jersey Institute of Technology</b>, NJ, USA</em></p>
+        <ul>
+          Database Management System
+          Data Structure and Algorithm
+          Machine Learning
+          Operating System
+          Computer Networking
+          Data Mining
+          Introduction to Big Data
+        </ul>
+      </div>
+    </div>
+
+    <!-- Item 2: Bachelor's -->
+    <div class="edu-row">
+      <!-- Circle -->
+      <div class="timeline-icon">
+        <div class="circle active">2</div>
+        <div class="line"></div>
+      </div>
+
+      <!-- Details -->
+      <div class="edu-content">
+        <h4>BACHELOR OF ENGINEERING, COMPUTER SCIENCE</h4>
+        <span class="tag-cloud">GPA : 7.1, June 2011 - July 2015</span>
+        <p><em><b>Jain Institute of Technology</b>, Karnataka, India</em></p>
+        <ul>
+          Database Management System
+          Data Structure and Algorithm
+          Machine Learning
+          <li>Operating System
+          Computer Networking
+          Graph Theory
+          Computer Organization
+          Compiler Design
+      </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
              <h2>Professional Experience</h2>
              <div class="resume-item">
                <div class="timeline-item">
