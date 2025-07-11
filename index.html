@@ -247,58 +247,92 @@
       <p>Check out my problem-solving streak and recent progress on LeetCode:</p>
       <img src="https://leetcard.jacoblin.cool/sangeethagopalrao?ext=heatmap" alt="LeetCode Heatmap" />
     </section>
-                
-        <style>
-  .stacked-bar-container {
-    background: #ddd;
-    width: 100%;
-    height: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-  }
+        <body>
 
-  .stacked-bar-segment {
-    height: 100%;
-  }
+  <h1>🧠 My LeetCode Skills</h1>
 
-  .legend {
-    margin-top: 10px;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    font-size: 14px;
-  }
+  <h2>Fundamental Skills</h2>
+  <canvas id="fundamentalChart"></canvas>
 
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+  <h2>Intermediate Skills</h2>
+  <canvas id="intermediateChart"></canvas>
 
-  .legend-color {
-    width: 12px;
-    height: 12px;
-    border-radius: 2px;
-    display: inline-block;
-  }
-</style>
+  <h2>Advanced Skills</h2>
+  <canvas id="advancedChart"></canvas>
 
-<h3>Python – Skill Breakdown</h3>
-<div class="stacked-bar-container">
-  <div class="stacked-bar-segment" style="width: 40%; background: #7cb9e8;" title="Array (40%)"></div>
-  <div class="stacked-bar-segment" style="width: 30%; background: #ffa500;" title="Dynamic Programming (30%)"></div>
-  <div class="stacked-bar-segment" style="width: 20%; background: #20b2aa;" title="String (20%)"></div>
-  <div class="stacked-bar-segment" style="width: 10%; background: #e9967a;" title="Other (10%)"></div>
-</div>
+  <script>
+    const leetcodeSkills = {
+      "Fundamental": {
+        "Array": 110,
+        "String": 50,
+        "Two Pointers": 37,
+        "Sorting": 29,
+        "Stack": 15,
+        "Linked List": 15,
+        "Simulation": 8,
+        "Matrix": 6
+      },
+      "Intermediate": {
+        "Database": 65,
+        "Hash Table": 36,
+        "Binary Search": 36
+      },
+      "Advanced": {
+        "Dynamic Programming": 27,
+        "Divide and Conquer": 8,
+        "Backtracking": 3,
+        "Trie": 3,
+        "Quickselect": 2,
+        "Union Find": 2,
+        "Monotonic Stack": 2,
+        "Data Stream": 1
+      }
+    };
 
-<div class="legend">
-  <div class="legend-item"><span class="legend-color" style="background:#7cb9e8;"></span>Array</div>
-  <div class="legend-item"><span class="legend-color" style="background:#ffa500;"></span>Dynamic Programming</div>
-  <div class="legend-item"><span class="legend-color" style="background:#20b2aa;"></span>String</div>
-  <div class="legend-item"><span class="legend-color" style="background:#e9967a;"></span>Other</div>
-</div>
+    const colors = [
+      '#4e79a7','#f28e2c','#e15759','#76b7b2','#59a14f',
+      '#edc949','#af7aa1','#ff9da7','#9c755f','#bab0ab'
+    ];
 
+    function renderChart(canvasId, dataObj) {
+      const ctx = document.getElementById(canvasId).getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: Object.keys(dataObj),
+          datasets: [{
+            label: 'Problems Solved',
+            data: Object.values(dataObj),
+            backgroundColor: colors.slice(0, Object.keys(dataObj).length),
+            borderRadius: 8,
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: ctx => ` ${ctx.label}: ${ctx.raw} problems`
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { stepSize: 10 }
+            }
+          }
+        }
+      });
+    }
+
+    renderChart("fundamentalChart", leetcodeSkills.Fundamental);
+    renderChart("intermediateChart", leetcodeSkills.Intermediate);
+    renderChart("advancedChart", leetcodeSkills.Advanced);
+  </script>
+
+</body>
 
 
    
