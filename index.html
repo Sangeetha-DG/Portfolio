@@ -113,6 +113,76 @@
     object-fit: contain;
   }
        
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.progress-circle.active {
+  background-color: #9ABDDC;
+}
+
+.progress-line {
+  width: 4px;
+  height: 60px;
+  background-color: #ccc;
+  margin: 4px 0;
+}
+
+.progress-line.active {
+  background-color: #9ABDDC;
+}
+
+.progress-label {
+  font-size: 12px;
+  margin-top: 6px;
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+}
+
+.education-details {
+  flex: 1;
+}
+
+.education-details h4 {
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.resume-item {
+  margin-bottom: 40px;
+}
+
+.timeline-item .content ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.timeline-item .content ul li {
+  list-style-type: disc;
+}
 
 
 
@@ -177,16 +247,16 @@
           </div>  
        </div>
     </section><!-- End Skills Section -->
-    
+    <div class="education-section" style="display: flex; gap: 40px; align-items: flex-start;">
     <div class="progress-container">
     <div class="progress-step">
-      <div class="progress-circle active">1</div>
-      <div class="progress-label">M.S.</div>
+      <div class="progress-circle active"></div>
+      <div class="progress-label"></div>
     </div>
     <div class="progress-line active"></div>
     <div class="progress-step">
-      <div class="progress-circle active">2</div>
-      <div class="progress-label">B.E.</div>
+      <div class="progress-circle active"></div>
+      <div class="progress-label"></div>
     </div>
   </div>
   <div class="row">
