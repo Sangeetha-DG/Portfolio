@@ -101,31 +101,44 @@
       background-color: #BDB5D5;
       margin-top: 8px;
     }
-    .leetcode-container {
+    
+        <style>
+  .leetcode-container {
     display: flex;
-    flex-direction: row; /* align boxes horizontally */
+    flex-direction: row;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* stacks on smaller screens */
+    flex-wrap: wrap;
   }
-          .leetcode-box {
-        width: 250px; /* You can adjust this */
-            height:250px;
-        padding: 10px;
-        background: #ffffff;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        margin-top: 15px;
-      }
-      
-      .leetcode-box img {
-        max-height:200px
-        max-width: 100%;
-        height: auto;
-        border-radius: 6px;
-      }
+
+  .leetcode-box {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .leetcode-box h3 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .leetcode-box img {
+    max-height: 200px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+</style>
 
     
    
