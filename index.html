@@ -112,52 +112,7 @@
     margin: 0 auto;
     object-fit: contain;
   }
-
-.progress-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Adjust alignment as needed */
-}
-
-.progress-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Adjust alignment as needed */
-  margin-bottom: 20px; /* Space between steps */
-}
-
-.progress-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: lightgray;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-}
-
-.progress-circle.active {
-  background-color: #4CAF50; /* Example color for active step */
-}
-
-.progress-line {
-  width: 2px; /* Line thickness */
-  height: 40px; /* Line length between circles */
-  background-color: lightgray;
-}
-
-.progress-line.active {
-  background-color: #4CAF50; /* Example color for active line */
-}
-
-.progress-label {
-  margin-top: 5px; /* Space between circle and label */
-}
-
-    
-   
+       
 
 
 
@@ -223,11 +178,22 @@
        </div>
     </section><!-- End Skills Section -->
     
+    <div class="progress-container">
+    <div class="progress-step">
+      <div class="progress-circle active">1</div>
+      <div class="progress-label">M.S.</div>
+    </div>
+    <div class="progress-line active"></div>
+    <div class="progress-step">
+      <div class="progress-circle active">2</div>
+      <div class="progress-label">B.E.</div>
+    </div>
+  </div>
   <div class="row">
           <div class="col-lg-12" data-aos="fade-up">
            <h2>Education</h2>
-            <div class="resume=item">
-              <div class="timeline">
+            <div class="resume-item">
+             
                 <div class="timeline-item">
                   <div class="content">
                     <h4> MASTER OF SCIENCE, COMPUTER SCIENCE </h4>
