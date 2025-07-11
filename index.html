@@ -248,58 +248,57 @@
       <img src="https://leetcard.jacoblin.cool/sangeethagopalrao?ext=heatmap" alt="LeetCode Heatmap" />
     </section>
                 
-         <style>
-  .skill-group {
-    margin-bottom: 20px;
-  }
-  .skill-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  .sub-skill {
-    margin-left: 20px;
-    margin-top: 8px;
-  }
-  .progress-bar-bg {
+        <style>
+  .stacked-bar-container {
     background: #ddd;
-    height: 10px;
     width: 100%;
-    border-radius: 5px;
+    height: 20px;
+    border-radius: 10px;
     overflow: hidden;
+    display: flex;
   }
-  .progress-bar-fill {
-    height: 10px;
-    border-radius: 5px;
+
+  .stacked-bar-segment {
+    height: 100%;
+  }
+
+  .legend {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    display: inline-block;
   }
 </style>
 
-<div class="skill-group">
-  <div class="skill-label">Python</div>
-  <div class="progress-bar-bg">
-    <div class="progress-bar-fill" style="width: 80%; background: #306998;"></div>
-  </div>
-
-  <div class="sub-skill">
-    <p>Array</p>
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 85%; background: #7cb9e8;"></div>
-    </div>
-  </div>
-
-  <div class="sub-skill">
-    <p>Dynamic Programming</p>
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 60%; background: #ffa500;"></div>
-    </div>
-  </div>
-
-  <div class="sub-skill">
-    <p>String</p>
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 70%; background: #20b2aa;"></div>
-    </div>
-  </div>
+<h3>Python – Skill Breakdown</h3>
+<div class="stacked-bar-container">
+  <div class="stacked-bar-segment" style="width: 40%; background: #7cb9e8;" title="Array (40%)"></div>
+  <div class="stacked-bar-segment" style="width: 30%; background: #ffa500;" title="Dynamic Programming (30%)"></div>
+  <div class="stacked-bar-segment" style="width: 20%; background: #20b2aa;" title="String (20%)"></div>
+  <div class="stacked-bar-segment" style="width: 10%; background: #e9967a;" title="Other (10%)"></div>
 </div>
+
+<div class="legend">
+  <div class="legend-item"><span class="legend-color" style="background:#7cb9e8;"></span>Array</div>
+  <div class="legend-item"><span class="legend-color" style="background:#ffa500;"></span>Dynamic Programming</div>
+  <div class="legend-item"><span class="legend-color" style="background:#20b2aa;"></span>String</div>
+  <div class="legend-item"><span class="legend-color" style="background:#e9967a;"></span>Other</div>
+</div>
+
 
 
    
