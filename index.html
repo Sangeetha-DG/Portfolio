@@ -101,6 +101,23 @@
       background-color: #BDB5D5;
       margin-top: 8px;
     }
+   * {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.lskills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.Python {width: 205; background-color: #04AA6D;}
+.PostgreSQL {width: 55; background-color: #2196F3;}
+
 
 
   </style>
@@ -242,23 +259,18 @@
           <p> Solved more than 250 Problems on Leetcode, Demonstrated commitment to continuous learning by solving algorithmic challenges on Leetcode for 100 consecutive days</p>
           <a href="https://leetcode.com/u/sangeethagopalrao/"> Leetcode Profile</a>
         </div>
-        <canvas id="langChart" width="200" height="200"></canvas>
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-          <script>
-            const ctx = document.getElementById('langChart').getContext('2d');
-            new Chart(ctx, {
-              type: 'pie',
-              data: {
-                labels: ['Python', 'PostgreSQL'],
-                datasets: [{
-                  label: 'Language Usage',
-                  data: [205, 45, 3],
-                  backgroundColor: ['#306998', '#b07219', '#f34b7d'],
-                }]
-              }
-               
-            });
-          </script>
+        <p>Python</p>
+            <div class="container">
+              <div class="skills html">205</div>
+            </div>
+            
+         <p>PostgreSQL</p>
+            <div class="container">
+              <div class="skills css">80%</div>
+            </div>
+            
+           
+         
 
    
 
