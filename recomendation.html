@@ -118,7 +118,7 @@
   .project-visual {
     flex: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     border-left: 2px solid #ccc;
     padding-left: 20px;
@@ -154,12 +154,8 @@
       <br>• Extracted top news topics from users’ tweets in real-time to match relevant YouTube videos.
     </p>
 
-    <p><strong>Cross-Platform Data Analysis:</strong></p>
-    <ul>
-      <li>Collected data from Twitter and YouTube manually using known trending topics.</li>
-      <li>Used TF-IDF (via <code>TfidfVectorizer</code> from scikit-learn) to represent and compare tweet and video content.</li>
-      <li>Applied cosine similarity to compute the most relevant YouTube video recommendations.</li>
-    </ul>
+    
+      
   </div>
 </div>
 
@@ -170,10 +166,13 @@
 
 <div class="slider-container">
   <div class="project-visual">
+    <p><strong>Cross-Platform Data Analysis:</strong></p>
+    <ul>
     <span class="tag-cloud">
-    <div class="slide"><img src="docs/assets/imag3.png" alt="Slide 3">Twitter Data</div></span>
-      <span class="tag-cloud"><div class="slide"><img src="docs/assets/imag1.png" alt="Slide 1">TF-idf Vectorized</div> </span>
-   <span class="tag-cloud"> <div class="slide"><img src="docs/assets/imag2.png" alt="Slide 2">Cosine similarity </div></span>
+    <div class="slide"><img src="docs/assets/imag3.png" alt="Slide 3">Twitter Data Collected data from Twitter and YouTube manually using known trending topics.</div></span>
+      <span class="tag-cloud"><div class="slide"><img src="docs/assets/imag1.png" alt="Slide 1">TF-idf Vectorized<li>Used TF-IDF (via <code>TfidfVectorizer</code> from scikit-learn) to represent and compare tweet and video content.</li></div> </span>
+   <span class="tag-cloud"> <div class="slide"><img src="docs/assets/imag2.png" alt="Slide 2">Cosine similarity <li>Applied cosine similarity to compute the most relevant YouTube video recommendations.</li> </div></span>
+    </ul>
   </div>
   </div>
       
