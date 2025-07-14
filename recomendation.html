@@ -227,50 +227,50 @@
 
  
 
-
-
-  <div class="project-visual">
+<div class="project-visual">
   <p><strong>Cross-Platform Data Analysis:</strong></p>
-<span class="tag-cloud">
-  <div class="slide">
-    <img src="docs/assets/imag3.png" alt="Slide 1">
-    <div class="slide-text">
-      <h4>Twitter Data</h4>
-      <p>Collected data from <br> Twitter and YouTube <br> manually using <br> known trending topics.</p>
-    </div>
-  </div>
-</span>
-    
-<span class="tag-cloud">
-  <div class="slide">
-    <img src="docs/assets/imag1.png" alt="Slide 2">
-    <div class="slide-text">
-      <h4>TF-IDF Vectorizer</h4>
-      <p>Used TF-IDF <br> (<code>TfidfVectorizer </code> from scikit-learn)<br>  to represent and compare <br> tweet and video content.</p>
-    </div>
-  </div>
-</span>
-   
 
-    <span class="tag-cloud">
-
-  <div class="slide">
-    <img src="docs/assets/imag2.png" alt="Slide 3">
-    <div class="slide-text">
-      <h4>Cosine Similarity</h4>
-      <p>Applied cosine similarity to compute the most <br> relevant YouTube video recommendations.</p>
+  <div class="slider">
+    <div class="slide active">
+      <img src="docs/assets/imag3.png" alt="Slide 1">
+      <div class="slide-text">
+        <h4>Twitter Data</h4>
+        <p>Collected data from Twitter and YouTube manually using known trending topics.</p>
+      </div>
     </div>
-  </div>
-    </span>
- <span class="tag-cloud">
+
     <div class="slide">
-    <img src="docs/assets/imag4.png" alt="Slide 3">
-    <div class="slide-text">
-      <h4>Video Recommendation <br> based on the input value</h4>
-      <p>The output is top 5 <br>similar video to the titled <br> "STOCK" from youtube_data data<br> frame based on the cosine similarity matrix</p>
+      <img src="docs/assets/imag1.png" alt="Slide 2">
+      <div class="slide-text">
+        <h4>TF-IDF Vectorizer</h4>
+        <p>Used <code>TfidfVectorizer</code> from scikit-learn to represent and compare tweet and video content.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="docs/assets/imag2.png" alt="Slide 3">
+      <div class="slide-text">
+        <h4>Cosine Similarity</h4>
+        <p>Computed cosine similarity to recommend the most relevant YouTube videos.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="docs/assets/imag4.png" alt="Slide 4">
+      <div class="slide-text">
+        <h4>Video Recommendation</h4>
+        <p>The output is top 5 similar videos to the title "STOCK" from the YouTube dataset.</p>
+      </div>
     </div>
   </div>
-    </span>
+
+  <!-- Dots -->
+  <div class="dots">
+    <span class="dot active" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+    <span class="dot" onclick="showSlide(3)"></span>
+  </div>
 </div>
 
 
