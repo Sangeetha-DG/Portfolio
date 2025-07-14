@@ -251,7 +251,15 @@
 
   <!-- Right Side: Divider + Image -->
 
- 
+  <!-- Dots -->
+  <div class="dots">
+    <span class="dot active" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+    <span class="dot" onclick="showSlide(3)"></span>
+  </div>
+</div>
+
 
 <div class="project-visual">
   <p><strong>Cross-Platform Data Analysis:</strong></p>
@@ -290,15 +298,7 @@
     </div>
   </div>
 
-  <!-- Dots -->
-  <div class="dots">
-    <span class="dot active" onclick="showSlide(0)"></span>
-    <span class="dot" onclick="showSlide(1)"></span>
-    <span class="dot" onclick="showSlide(2)"></span>
-    <span class="dot" onclick="showSlide(3)"></span>
-  </div>
-</div>
-
+ 
 
 <script>
   let currentSlide = 0;
@@ -322,7 +322,7 @@
   function goToSlide(index) {
     clearInterval(slideInterval);  // stop auto if user clicks
     showSlide(index);
-    slideInterval = setInterval(nextSlide, 6000); // restart auto
+    slideInterval = setInterval(nextSlide, 10000); // restart auto
   }
 </script>
       
