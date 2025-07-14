@@ -165,80 +165,7 @@
     border-radius: 8px;
   }
      
-  .step-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 20px 0;
-    position: relative;
-  }
-
-  .step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    position: relative;
-    text-align: center;
-  }
-
-  .step img {
-    width: 200px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid #35495e;
-  }
-
-  .step h4 {
-    margin: 10px 0 5px;
-    font-size: 14px;
-    color: #333;
-  }
-
-  .step p {
-    font-size: 13px;
-    color: #555;
-    line-height: 1.4;
-  }
-
-  .arrow {
-    position: absolute;
-    top: 50px;
-    right: -35px;
-    width: 60px;
-    height: 20px;
-  }
-
-  .arrow svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Hide last arrow */
-  .step:last-child .arrow {
-    display: none;
-  }
-
-  /* For responsiveness */
-  @media screen and (max-width: 800px) {
-    .step-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .arrow {
-      transform: rotate(90deg);
-      left: 50%;
-      top: auto;
-      bottom: -40px;
-      right: auto;
-    }
-    .step:last-child .arrow {
-      display: none;
-    }
-  }
+  
 
     
 
@@ -324,49 +251,6 @@
     </div>
   </div>
     </span>
-</div>
-
-    <div class="step-container">
-
-  <div class="step">
-    <img src="docs/assets/imag3.png" alt="Twitter Data">
-    <h4>Twitter Data</h4>
-    <p>Collected data from Twitter and YouTube using trending topics.</p>
-    <div class="arrow">
-      <svg viewBox="0 0 100 20">
-        <path d="M0 10 H90 L80 5 M90 10 L80 15" stroke="#35495e" stroke-width="2" fill="none"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="step">
-    <img src="docs/assets/imag1.png" alt="TF-IDF Vectorizer">
-    <h4>TF-IDF Vectorizer</h4>
-    <p>Used scikit-learn's TfidfVectorizer to compare tweet and video content.</p>
-    <div class="arrow">
-      <svg viewBox="0 0 100 20">
-        <path d="M0 10 H90 L80 5 M90 10 L80 15" stroke="#35495e" stroke-width="2" fill="none"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="step">
-    <img src="docs/assets/imag2.png" alt="Cosine Similarity">
-    <h4>Cosine Similarity</h4>
-    <p>Computed the most relevant video recommendations using similarity score.</p>
-    <div class="arrow">
-      <svg viewBox="0 0 100 20">
-        <path d="M0 10 H90 L80 5 M90 10 L80 15" stroke="#35495e" stroke-width="2" fill="none"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="step">
-    <img src="docs/assets/imag4.png" alt="Final Output">
-    <h4>Video Recommendation</h4>
-    <p>Top 5 videos similar to title like “STOCK” using the cosine similarity matrix.</p>
-  </div>
-
 </div>
 
 
