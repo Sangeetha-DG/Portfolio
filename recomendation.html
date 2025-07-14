@@ -73,24 +73,65 @@
     </nav>
 
     <!-- Project Description -->
-    <div class="project">
-      
+  <style>
+  .project-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
 
-      <p><strong>Problem statement:</strong> In this project, we are building a recommendation system that suggests transcribed video content matching Twitter topic categories. You will select 10 Twitter users and determine which YouTube transcriptions are relevant for each user, based on their past retweets.</p>
+  .project-description {
+    flex: 2;
+  }
 
-      <p><strong>Description:</strong> 
-      - Used the Twitter API to fetch user data and YouTube Data API to collect video titles.  
-      - Built a cross-platform system that recommends YouTube videos based on trending topics from Twitter.  
-      - Django was used as the web framework to manage the backend and API integration.  
-      - Extracted top news topics from users’ tweets in real-time to match relevant YouTube videos.</p>
+  .project-visual {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+    min-height: 300px; /* optional, for visual balance */
+  }
 
-      <p><strong>Cross-Platform Data Analysis:</strong></p>
-      <ul>
-        <li>Collected data from Twitter and YouTube manually using known trending topics.</li>
-        <li>Used TF-IDF (via <code>TfidfVectorizer</code> from scikit-learn) to represent and compare tweet and video content.</li>
-        <li>Applied cosine similarity to compute the most relevant YouTube video recommendations.</li>
-      </ul>
-    </div>
+  .project-visual img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+</style>
+
+<!-- Project Section -->
+<div class="project-section">
+
+  <!-- Left Side: Text -->
+  <div class="project-description">
+    <p><strong>Problem statement:</strong> In this project, we are building a recommendation system that suggests transcribed video content matching Twitter topic categories. You will select 10 Twitter users and determine which YouTube transcriptions are relevant for each user, based on their past retweets.</p>
+
+    <p><strong>Description:</strong> 
+      <br>• Used the Twitter API to fetch user data and YouTube Data API to collect video titles.  
+      <br>• Built a cross-platform system that recommends YouTube videos based on trending topics from Twitter.  
+      <br>• Django was used as the web framework to manage the backend and API integration.  
+      <br>• Extracted top news topics from users’ tweets in real-time to match relevant YouTube videos.
+    </p>
+
+    <p><strong>Cross-Platform Data Analysis:</strong></p>
+    <ul>
+      <li>Collected data from Twitter and YouTube manually using known trending topics.</li>
+      <li>Used TF-IDF (via <code>TfidfVectorizer</code> from scikit-learn) to represent and compare tweet and video content.</li>
+      <li>Applied cosine similarity to compute the most relevant YouTube video recommendations.</li>
+    </ul>
+  </div>
+
+  <!-- Right Side: Divider + Image -->
+  <div class="project-visual">
+    <img src="your-image.jpg" alt="Recommendation Visualization" />
+    <!-- Or leave empty for spacing -->
+  </div>
+
+</div>
 
   </div>
 
