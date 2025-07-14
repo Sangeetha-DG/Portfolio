@@ -54,6 +54,18 @@
       line-height: 1.6;
       color: #333;
     }
+    .tag-cloud {
+  display: inline-block;
+  color: #black; /* Text color (e.g. Python blue) */
+  padding: 6px 12px;
+  font-family: Arial, sans-serif;
+  border-radius: 4px;
+  background-color: #F5FBFF; /* White inside */
+  border: 2px solid #35495e; /* Outline color */
+   margin: 6px 6px 0 0;
+  font-size: 14px;
+}
+
   </style>
 </head>
 <body>
@@ -103,7 +115,7 @@
   }
      
     .slider-container {
-      max-width: 200px;
+      max-width: 400px;
       position: relative;
       margin: auto;
       border-radius: 10px;
@@ -178,11 +190,13 @@
 
 
 <div class="slider-container">
+    <span class="tag-cloud">
   <div class="slides" id="slides">
     <div class="slide"><img src="docs/assets/imag1.png" alt="Slide 1">TF-idf Vectorized</div>
     <div class="slide"><img src="docs/assets/imag2.png" alt="Slide 2">Cosine similarity </div>
     <div class="slide"><img src="docs/assets/imag3.png" alt="Slide 3">Twitter Data</div>
   </div>
+      
 
   <div class="dots" id="dots">
     <span class="dot active" onclick="goToSlide(0)"></span>
@@ -190,6 +204,7 @@
     <span class="dot" onclick="goToSlide(2)"></span>
   </div>
 </div>
+  </span>
 
 <script>
   let currentSlide = 0;
