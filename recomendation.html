@@ -65,6 +65,24 @@
    margin: 6px 6px 0 0;
   font-size: 14px;
 }
+      .project-visual {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+    min-height: 300px; /* optional, for visual balance */
+  }
+
+  .project-visual img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+</style>
+
 
   </style>
 </head>
@@ -100,7 +118,7 @@
   .project-visual {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     border-left: 2px solid #ccc;
     padding-left: 20px;
@@ -151,15 +169,16 @@
 
 
 <div class="slider-container">
+  <div class="project-visual">
     <span class="tag-cloud">
-
-    <div class="slide"><img src="docs/assets/imag1.png" alt="Slide 1">TF-idf Vectorized</div>
-    <div class="slide"><img src="docs/assets/imag2.png" alt="Slide 2">Cosine similarity </div>
-    <div class="slide"><img src="docs/assets/imag3.png" alt="Slide 3">Twitter Data</div>
+    <div class="slide"><img src="docs/assets/imag3.png" alt="Slide 3">Twitter Data</div></span>
+      <span class="tag-cloud"><div class="slide"><img src="docs/assets/imag1.png" alt="Slide 1">TF-idf Vectorized</div> </span>
+   <span class="tag-cloud"> <div class="slide"><img src="docs/assets/imag2.png" alt="Slide 2">Cosine similarity </div></span>
+  </div>
   </div>
       
 
-  </span>
+ 
 
 
 
