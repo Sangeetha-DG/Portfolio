@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+<head>
+  <meta charset="UTF-8">
+  <title>Breadcrumb Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
 
-   <style>
+    .container {
+      padding: 20px;
+    }
+
     .breadcrumb-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      padding: 12px 20px;
       background-color: #f5f5f5;
       border-radius: 5px;
-      font-family: Arial, sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb-left,
+    .breadcrumb-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .breadcrumb-left h3 {
+      margin: 0 10px 0 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
     }
 
     .breadcrumb-left a,
@@ -24,62 +49,48 @@
     .breadcrumb-right a:hover {
       text-decoration: underline;
     }
+
+    .project p {
+      line-height: 1.6;
+      color: #333;
+    }
   </style>
+</head>
 <body>
 
   <div class="container">
-    <h1>My Work Samples</h1>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Breadcrumb Example</title>
- 
-</head>
-<body>
-   <h3>  Reciomendtaion </h3>
-  <nav class="breadcrumb-container">
-    <div class="breadcrumb-left">
-      <a href="/home">Home</a>
-    </div>
-    <div class="breadcrumb-right">
-      <a href="/next-project">Next Project →</a>
-    </div>
-  </nav>
-
-</body>
-</html>
-
-
-    <div class="project">
     
-      <p>Youtube Video Recommendation 
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-container">
+      <div class="breadcrumb-left">
+        <h3>Recommendation</h3>
+        <a href="/home">Home</a>
+      </div>
+      <div class="breadcrumb-right">
+        <a href="/next-project">Next Project →</a>
+      </div>
+    </nav>
 
-Problem statement: In this project building a recommendation system that recommends transcribed video content to all of the twitter topic categories. You will select 10 Twitter users and determine which of the youtube transcriptions you need to feed the app for each one of them. Your recommendations will be based on their past retweets so select people that are very active on twitter.
+    <!-- Project Description -->
+    <div class="project">
+      <p><strong>Youtube Video Recommendation</strong></p>
 
-Description: Used twitter api to fetch twitter data from the user. And Youtube data api to collect youtube title to recomend the Youtube video title based on top news topics
+      <p><strong>Problem statement:</strong> In this project, we are building a recommendation system that suggests transcribed video content matching Twitter topic categories. You will select 10 Twitter users and determine which YouTube transcriptions are relevant for each user, based on their past retweets.</p>
 
-Here tried address the video recommendation issue by cross-platform collaboration from Twitter to YouTube.
+      <p><strong>Description:</strong> 
+      - Used the Twitter API to fetch user data and YouTube Data API to collect video titles.  
+      - Built a cross-platform system that recommends YouTube videos based on trending topics from Twitter.  
+      - Django was used as the web framework to manage the backend and API integration.  
+      - Extracted top news topics from users’ tweets in real-time to match relevant YouTube videos.</p>
 
-I used YouTube as the video sharing platform to perform the recommendation task, and Twitter as the social textual stream platform to extract the real-time hot topics users followed.
-
-Using Django webframework I designed a cross-platform video recommendation strategy (1) real-time top topic detection—the top news topics that users are following currently are extracted from users’ tweets, which are utilized to obtain the related videos on YouTube.
-
-CROSS-PLATFORM DATA ANALYSIS
-
-examine the characteristics of user behaviors between Twitter and YouTube.
-
-First, described how we collect our cross-platform dataset. In order to maintain the reliability of the data analysis, we manually select some widely- known top news topics that are frequently talked about both in Twitter and YouTube.
-
-Second TF-IDF representation of Tweets plots and yotube dataplots here I am using the TfidfVectorizer from scikit-learn
-
-Third, With cosine similarity matrix computed, defined the function “recommendations” that will return top recommendations videos</p>
+      <p><strong>Cross-Platform Data Analysis:</strong></p>
+      <ul>
+        <li>Collected data from Twitter and YouTube manually using known trending topics.</li>
+        <li>Used TF-IDF (via <code>TfidfVectorizer</code> from scikit-learn) to represent and compare tweet and video content.</li>
+        <li>Applied cosine similarity to compute the most relevant YouTube video recommendations.</li>
+      </ul>
     </div>
 
-  
-
-    <a href="index.html" class="btn-work">← Back to Home</a>
   </div>
 
 </body>
