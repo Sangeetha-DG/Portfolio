@@ -1,1 +1,344 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Recommendation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .breadcrumb-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background-color: #35495e;
+         color: white;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb-left,
+    .breadcrumb-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .breadcrumb-left h3 {
+      margin: 0 10px 0 0;
+      font-size: 18px;
+      font-weight: 600;
+   color: white;    }
+
+    .breadcrumb-left a,
+    .breadcrumb-right a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    .breadcrumb-left a:hover,
+    .breadcrumb-right a:hover {
+      text-decoration: underline;
+    }
+
+    .project p {
+      line-height: 1.6;
+      color: #333;
+    }
+   .tag-cloud {
+  display: inline-block;
+  color: #333;
+  padding: 12px 16px;
+  font-family: Arial, sans-serif;
+  border-radius: 6px;
+  background-color: #F5FBFF; /* Soft white-blue background */
+  margin: 6px 6px 0 0;
+  font-size: 14px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05); /* Optional soft shadow for depth */
+}
+
+/* Style heading inside tag-cloud */
+.tag-cloud h4 {
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  margin: 0 0 6px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ddd; /* Light underline */
+}
+
+      .project-visual {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+         align-items: flex-start;
+    align-items: Left;
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+    min-height: 300px; /* optional, for visual balance */
+  }
+
+  .project-visual img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+    .slider {
+  position: relative;
+  width: 100%;
+}
+.slide {
+  display: none;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+    .slide.active {
+  display: flex;
+}
+
+.slide img {
+  width: 480px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.slide-text {
+  flex: 1;
+}
+
+.slide-text h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+.slide-text p {
+  margin: 0;
+  line-height: 1.5;
+  color: #444;
+}
+    /* Dots */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #35495e;
+}
+     footer {
+      text-align: center;
+      padding: 1rem;
+      background: #35495e;
+      color: white;
+      margin-top: 2rem;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-container">
+      <div class="breadcrumb-left">
+        <h3>YouTube Video Recommendation using Twitter API</h3>
+       
+      </div>
+      <div class="breadcrumb-right">
+         <a href="https://sangeetha-dg.github.io/Portfolio/">Home/</a>
+        <a href="https://sangeetha-dg.github.io/Portfolio/stockapp.html">Next Project →</a>
+      </div>
+    </nav>
+
+    <!-- Project Description -->
+  <style>
+  .project-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .project-description {
+    flex: 2;
+  }
+
+  .project-visual {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: Left;
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+    min-height: 300px; /* optional, for visual balance */
+  }
+
+  .project-visual img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+     
+  
+
+    
+
+   
+
+</style>
+
+<!-- Project Section -->
+    
+<div class="project-section">
+
+  <!-- Left Side: Text -->
+  <div class="project-description">
+    <p><strong>Problem statement:</strong> In this project, we are building a recommendation system that suggests transcribed video content matching Twitter topic categories. You will select 10 Twitter users and determine which YouTube transcriptions are relevant for each user, based on their past retweets.</p>
+<span class="tag-cloud">
+<h4 style="font-family: Verdana;"> Project Information </h4>
+  <p> Category : Data Mining </p>
+  <p> Client : Academic </p>
+  <p> Project Date : 20 May 2023 </p>
+   <p> Project URL : <a href="https://github.com/93san/project_data_mining/blob/main/data_mining_tweet_31.ipynb" target="_blank" style="text-decoration: none; color: #35495e;">
+    Project Link
+  </a>
+  
+</p>
+
+
+
+</span>
+    <p><strong>Description:</strong> 
+      <br>• Used the Twitter API to fetch user data and YouTube Data API to collect video titles.  
+      <br>• Built a cross-platform system that recommends YouTube videos based on trending topics from Twitter.  
+      <br>• Django was used as the web framework to manage the backend and API integration.  
+      <br>• Extracted top news topics from users’ tweets in real-time to match relevant YouTube videos.
+    </p>
+
+    
+      
+  </div>
+</div>
+
+  <!-- Right Side: Divider + Image -->
+
+  
+
+
+<div class="project-visual">
+  <p><strong>Cross-Platform Data Analysis:</strong></p>
+<span class="tag-cloud">
+  <div class="slider">
+    <div class="slide active">
+      <img src="docs/assets/imag3.png" alt="Slide 1">
+      <div class="slide-text">
+        <h4>Twitter Data</h4>
+        <p>Collected data from Twitter and YouTube manually using known trending topics.</p>
+      </div>
+    </div>
+</span>
+
+    <div class="slide">
+      <img src="docs/assets/imag1.png" alt="Slide 2">
+      <div class="slide-text">
+        <h4>TF-IDF Vectorizer</h4>
+        <p>Used <code>TfidfVectorizer</code> from scikit-learn to represent and compare tweet and video content.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="docs/assets/imag2.png" alt="Slide 3">
+      <div class="slide-text">
+        <h4>Cosine Similarity</h4>
+        <p>Computed cosine similarity to recommend the most relevant YouTube videos.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="docs/assets/imag4.png" alt="Slide 4">
+      <div class="slide-text">
+        <h4>Video Recommendation</h4>
+        <p>The output is top 5 similar videos to the title "STOCK" from the YouTube dataset.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Dots -->
+  <div class="dots">
+    <span class="dot active" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+    <span class="dot" onclick="showSlide(3)"></span>
+  </div>
+</div> 
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let slideInterval = setInterval(nextSlide, 4000); // 4 seconds
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function goToSlide(index) {
+    clearInterval(slideInterval);  // stop auto if user clicks
+    showSlide(index);
+    slideInterval = setInterval(nextSlide, 10000); // restart auto
+  }
+</script>
+      
+
+ 
+<footer>
+      <p>© 2025 Sangeetha D G | Built with 💻 and ☕</p>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>
