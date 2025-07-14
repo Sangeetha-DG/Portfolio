@@ -115,6 +115,23 @@
     margin: 0 auto;
     object-fit: contain;
   }
+.filter-btn {
+  padding: 8px 16px;
+  margin-right: 10px;
+  background-color: #306998;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background-color: #204d74;
+}
+
+.project-card {
+  margin-bottom: 20px;
+}
 
     
 
@@ -302,6 +319,13 @@
         
         </div>
           <!-- Work sample -->
+          <div class="filter-buttons" style="margin-bottom: 20px;">
+  <button class="filter-btn active" data-category="all">All</button>
+  <button class="filter-btn" data-category="ml">ML</button>
+  <button class="filter-btn" data-category="networking">Networking</button>
+  <button class="filter-btn" data-category="web">Web</button>
+</div>
+<div class="project-card" data-category="Machine Learning">
           <section id="work">
   <div class="container">
      <h2 style="font-family: Verdana;"> Work Samples</h2>
@@ -315,6 +339,7 @@
        </span>
     </a>
     
+    
      <a href="stockapp.html">
         
         <span class="tag-cloud">
@@ -323,7 +348,8 @@
             style="width: 250px; border-radius: 10px;">
         </span>
       </a>
-   
+   </div>
+   <div class="project-card" data-category="networking">
      <a href="stockapp.html">
        
         <span class="tag-cloud">
@@ -344,15 +370,6 @@
             style="width: 250px; border-radius: 10px;">
         </span>
       </a>
-      
-    <a href="stockapp.html">
-      
-        <span class="tag-cloud">
-           <h4 style="margin-top: 10px;">Bank database using the Django </h4>
-          <img src="docs/assets/bank1.jpg" alt="Stock App" class="img-fluid"
-            style="width: 250px; border-radius: 10px;">
-        </span>
-      </a>
       <a href="stockapp.html">
        
         <span class="tag-cloud">
@@ -361,10 +378,45 @@
             style="width: 250px; border-radius: 10px;">
         </span>
       </a>
+    </div>
+    <div class="project-card" data-category="networking">
+    <a href="stockapp.html">
+      
+        <span class="tag-cloud">
+           <h4 style="margin-top: 10px;">Bank database using the Django </h4>
+          <img src="docs/assets/bank1.jpg" alt="Stock App" class="img-fluid"
+            style="width: 250px; border-radius: 10px;">
+        </span>
+      </a>
+    </div>      
      
     </div>
   </div>
 </section>
+
+          <script>
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".project-card");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Remove active class from all
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const category = btn.getAttribute("data-category");
+
+      cards.forEach(card => {
+        if (category === "all" || card.getAttribute("data-category") === category) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
 
           
 
