@@ -113,6 +113,27 @@
                 box-shadow: none;
             }
         }
+        /* Dots container */
+.dots {
+    text-align: center;
+    margin-top: 6px;
+}
+
+/* Each dot */
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}
     </style>
 </head>
 <body>
@@ -122,9 +143,10 @@
 
         <section class="section clearfix">
             <h2>Abstract</h2>
-            <div class="image-box">
-                <img src="https://via.placeholder.com/180x120.png?text=Server+Diagram" alt="Server Architecture Diagram" />
-                <div>Server Architecture Diagram</div>
+           <div class="image-box">
+              <img id="slideImage" src="https://via.placeholder.com/340x180.png?text=Server+Diagram+1" alt="Diagram Slide" />
+              <div>Server Architecture Diagram</div>
+              <div class="dots" id="dotContainer"></div>
             </div>
             <p>
                 This project implements a custom TCP server application written in Java that listens on a configurable port,
@@ -190,6 +212,46 @@ clientSocket.close();
             </p>
         </section>
 
+<script>
+  const images = [
+    "https://via.placeholder.com/340x180.png?text=Server+Diagram+1",
+    "https://via.placeholder.com/340x180.png?text=Server+Diagram+2",
+    "https://via.placeholder.com/340x180.png?text=Server+Diagram+3"
+  ];
+
+  let current = 0;
+  const slideImage = document.getElementById("slideImage");
+  const dotContainer = document.getElementById("dotContainer");
+
+  // Create dots
+  images.forEach((_, index) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (index === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => showSlide(index));
+    dotContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll(".dot");
+
+  function showSlide(index) {
+    current = index;
+    slideImage.src = images[current];
+    updateDots();
+  }
+
+  function updateDots() {
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === current);
+    });
+  }
+
+  // Auto slide every 3 seconds
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    showSlide(current);
+  }, 3000);
+</script>
        
     </article>
 </body>
