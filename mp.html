@@ -79,6 +79,10 @@
             font-size: 0.9rem;
             color: #555;
               height: 220px;
+            position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
         }
 
         .image-box img {
@@ -142,12 +146,13 @@
         <p><em>Technologies:</em> Java, Socket Programming, HTTP Protocol, Expression Parsing</p>
 
         <section class="section clearfix">
-            <h2>Abstract</h2>
-           <div class="image-box">
+               <div class="image-box">
               <img id="slideImage" src="https://via.placeholder.com/340x180.png?text=Server+Diagram+1" alt="Diagram Slide" />
               <div>Server Architecture Diagram</div>
               <div class="dots" id="dotContainer"></div>
             </div>
+            <h2>Abstract</h2>
+        
             <p>
                 This project implements a custom TCP server application written in Java that listens on a configurable port,
                 parses mathematical expressions sent via HTTP requests, validates and computes the result, and responds with the output
