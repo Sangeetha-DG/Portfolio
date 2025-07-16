@@ -160,7 +160,42 @@
 #topBtn:hover {
   background-color: #163a5f;
 }
+#home {
+    background-image: url('docs/assets/dp.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+  }
 
+  .title {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+
+  /* Typing Animation */
+  .typed-text {
+    display: inline;
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 16ch }
+  }
+
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+  }
   
 
 
@@ -186,12 +221,14 @@
     </nav>
   </div>
 
-    
+  <section id="home">
+  <div>
+    <div class="title">I am Software Engineer</div>
+    <div class="title typed-text">/ Data Engineer</div>
+  </div>
+</section>
   <div class="main">
-      <section id="home">
-    <a href="docs/assets/dp.jpeg" class="linkedin"><i class="fab fa-linkedin fa-2x"></i></a>
-
-      </section>
+     
     <section id="about" >
     <h2 style="font-family: Verdana;">About Me</h2>
       <p style="font-family: Arial;"><p>I am a data enthusiast seeking an entry-level Software Engineer position where I can apply my technical skills and passion for building data pipelines and working with meaningful data. I am proficient in database management, network protocols, and machine learning, with a growing interest in secure software design and threat modeling. I’m eager to contribute to innovative, resilient, and data-driven solutions that create real impact in the community</p> </section>
