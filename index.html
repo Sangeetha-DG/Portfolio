@@ -173,23 +173,23 @@
     font-family: 'Roboto', sans-serif;
   }
 
-  .title {
+.typewriter h1 {
     font-size: 2.5em;
     font-weight: bold;
-  }
-
-  /* Typing Animation */
-  .typed-text {
-    display: inline;
     border-right: 2px solid #fff;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
   }
 
   @keyframes typing {
     from { width: 0 }
     to { width: 16ch }
+  }
+    @keyframes deleting {
+    from { width: 20ch; }
+    to { width: 0; }
   }
 
   @keyframes blink {
@@ -224,9 +224,8 @@
   
   <div class="main">
     <section id="home">
-  <div>
-    <div class="title">I am Software Engineer</div>
-    <div class="title typed-text">/ Data Engineer</div>
+  <div class="typewriter">
+    <h1 id="role-text"></h1>
   </div>
 </section>
      
@@ -521,6 +520,62 @@
   </section>
     <footer>
       <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑ Top</button>
+      <script>
+  const titles = ["I am a Software Engineer", "I am a Data Engineer", "I am Data Analyst"];
+  const el = document.getElementById("role-text");
+  let currentTitle = 0;
+
+  function typeText(text, callback) {
+    let i = 0;
+    el.style.animation = "none"; // Reset animation
+    el.innerHTML = "";
+    el.style.width = "0ch";
+    const typer = setInterval(() => {
+      el.innerHTML += text.charAt(i);
+      el.style.width = (i + 1) + "ch";
+      i++;
+      if (i === text.length) {
+        clearInterval(typer);
+        setTimeout(callback, 1500); // pause after typing
+      }
+    }, 100);
+  }
+
+  function deleteText(callback) {
+    let text = el.innerHTML;
+    let i = text.length;
+    const deleter = setInterval(() => {
+      el.innerHTML = text.substring(0, i - 1);
+      el.style.width = (i - 1) + "ch";
+      i--;
+      if (i === 0) {
+        clearInterval(deleter);
+        setTimeout(callback, 500); // pause before next word
+      }
+    }, 50);
+  }
+
+  function loopTitles() {
+    typeText(titles[currentTitle], () => {
+      deleteText(() => {
+        currentTitle = (currentTitle + 1) % titles.length;
+        loopTitles();
+      });
+    });
+  }
+
+  loopTitles(); // Start the animation
+</script>
+
+
+
+
+
+
+
+
+Ask ChatGPT
+
 
       <p>© 2025 Sangeetha D G | Built with 💻 and ☕</p>
       
