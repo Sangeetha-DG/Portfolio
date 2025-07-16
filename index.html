@@ -503,51 +503,51 @@
     });
   });
 </script>
-          <script>
-  const titles = ["I am a Software Engineer", "I am a Data Engineer"];
-  const el = document.getElementById("role-text");
-  let currentTitle = 0;
 
-  function typeText(text, callback) {
+          <script>
+  const roles = ["Software Engineer", "Data Engineer", "ML Enthusiast"];
+  const el = document.getElementById("role-text");
+  let currentRole = 0;
+
+  function typeWriter(text, callback) {
     let i = 0;
-    el.style.animation = "none"; // Reset animation
     el.innerHTML = "";
     el.style.width = "0ch";
-    const typer = setInterval(() => {
+    const typing = setInterval(() => {
       el.innerHTML += text.charAt(i);
       el.style.width = (i + 1) + "ch";
       i++;
       if (i === text.length) {
-        clearInterval(typer);
-        setTimeout(callback, 1500); // pause after typing
+        clearInterval(typing);
+        setTimeout(callback, 1500);
       }
     }, 100);
   }
 
-  function deleteText(callback) {
+  function deleteWriter(callback) {
     let text = el.innerHTML;
     let i = text.length;
-    const deleter = setInterval(() => {
+    const deleting = setInterval(() => {
       el.innerHTML = text.substring(0, i - 1);
       el.style.width = (i - 1) + "ch";
       i--;
       if (i === 0) {
-        clearInterval(deleter);
-        setTimeout(callback, 500); // pause before next word
+        clearInterval(deleting);
+        setTimeout(callback, 500);
       }
     }, 50);
   }
 
-  function loopTitles() {
-    typeText(titles[currentTitle], () => {
-      deleteText(() => {
-        currentTitle = (currentTitle + 1) % titles.length;
-        loopTitles();
+  function loopRoles() {
+    typeWriter(roles[currentRole], () => {
+      deleteWriter(() => {
+        currentRole = (currentRole + 1) % roles.length;
+        loopRoles();
       });
     });
   }
 
-  loopTitles(); // Start the animation
+  loopRoles();
 </script>
 
 <section id="contact" class="contact section-bg section-divider" style="background-color: #35495e; color: white; padding: 40px 0;">
