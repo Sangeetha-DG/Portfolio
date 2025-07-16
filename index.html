@@ -164,42 +164,28 @@
  
 
 #home {
-    background-image: url('docs/assets/dp5.jpg');
-    background-size: cover;
-    background-position: center;
     height: 100vh;
-    color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
+    text-align: center;
   }
 
-  .typewriter h1 {
+  .name {
     font-size: 2.5em;
     font-weight: bold;
-    border-right: 2px solid #fff;
+    margin-bottom: 20px;
+  }
+
+  #role-text {
+    font-size: 2em;
+    font-weight: 500;
+    border-right: 2px solid white;
     white-space: nowrap;
     overflow: hidden;
-    width: 0;
-    animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+    width: 0ch;
   }
-
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 20ch; }
-  }
-
-  @keyframes deleting {
-    from { width: 20ch; }
-    to { width: 0; }
-  }
-
-  @keyframes blink {
-    50% { border-color: transparent; }
-  }
-
 
 
   </style>
@@ -504,7 +490,7 @@
   });
 </script>
 
-          <script>
+         <script>
   const roles = ["Software Engineer", "Data Engineer", "ML Enthusiast"];
   const el = document.getElementById("role-text");
   let currentRole = 0;
@@ -513,13 +499,14 @@
     let i = 0;
     el.innerHTML = "";
     el.style.width = "0ch";
+    const fullText = text;
     const typing = setInterval(() => {
-      el.innerHTML += text.charAt(i);
+      el.innerHTML += fullText.charAt(i);
       el.style.width = (i + 1) + "ch";
       i++;
-      if (i === text.length) {
+      if (i === fullText.length) {
         clearInterval(typing);
-        setTimeout(callback, 1500);
+        setTimeout(callback, 1500); // pause after typing
       }
     }, 100);
   }
@@ -533,7 +520,7 @@
       i--;
       if (i === 0) {
         clearInterval(deleting);
-        setTimeout(callback, 500);
+        setTimeout(callback, 500); // pause before next typing
       }
     }, 50);
   }
@@ -549,6 +536,7 @@
 
   loopRoles();
 </script>
+
 
 <section id="contact" class="contact section-bg section-divider" style="background-color: #35495e; color: white; padding: 40px 0;">
   <div class="container">
