@@ -1,622 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sangeetha D G Portofolio </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sangeetha D G | Portfolio</title>
+
+  <!-- Fonts & Libraries -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
+      font-family: 'Roboto', sans-serif;
       display: flex;
+      background: #f9f9f9;
     }
 
-   
+    /* Sidebar */
     .sidebar {
-      width: 220px;
-      background-color:#35495e;
+      width: 240px;
+      background: #35495e;
       color: white;
       height: 100vh;
       position: fixed;
-      top: 0;
-      left: 0;
       padding: 2rem 1rem;
     }
-    .sidebar h1 {
+
+    .sidebar h2 {
       font-size: 1.4rem;
-      margin-bottom: 2rem;
-    }
-    .sidebar nav a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 1rem 0;
-      font-weight: 500;
-    }
-    .sidebar nav a:hover {
-      text-decoration: underline;
-      color: #f1f1f1;
-    }
-    .main {
-      margin-left: 240px;
-      padding: 2rem;
-      background-color: #f9f9f9;
-      width: calc(100% - 240px);
-    }
-    h2 {
-      color: #35495e;
       margin-bottom: 1rem;
     }
-  
-    footer {
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 0.8rem 0;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .social-links a {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    /* Main */
+    .main {
+      margin-left: 260px;
+      padding: 2rem;
+      width: calc(100% - 260px);
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    h2 {
+      color: #35495e;
+      margin-bottom: 20px;
+    }
+
+    /* Home */
+    #home {
+      height: 100vh;
+      background: url('docs/assets/dp5.jpg') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 1rem;
+    }
+
+    .name {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    #role-text {
+      font-size: 1.8rem;
+      border-right: 2px solid white;
+      padding-right: 5px;
+      white-space: nowrap;
+    }
+
+    /* Tags */
+    .tag-cloud {
+      display: inline-block;
+      border: 2px solid #35495e;
+      padding: 6px 12px;
+      margin: 6px 6px 0 0;
+      border-radius: 4px;
+      font-size: 14px;
+      background: #f5fbff;
+    }
+
+    /* Leetcode */
+    .leetcode-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .leetcode-box {
+      width: 260px;
+      background: #f5fbff;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Projects */
+    .filter-btn {
+      background: #306998;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin-right: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background: #204d74;
+    }
+
+    footer {
       background: #35495e;
       color: white;
-      margin-top: 2rem;
+      text-align: center;
+      padding: 1rem;
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .skills {
-      background-color:#F5FBFF; /* Light blue */
-      padding: 2rem 1rem;
-      border-radius: 8px;
-    }
-    
-  .tag-cloud {
-  display: inline-block;
-  color: #black; /* Text color (e.g. Python blue) */
-  padding: 6px 12px;
-  font-family: Arial, sans-serif;
-  border-radius: 4px;
-  background-color: #F5FBFF; /* White inside */
-  border: 2px solid #35495e; /* Outline color */
-   margin: 6px 6px 0 0;
-  font-size: 14px;
-}
-
-    
-        
-  .leetcode-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .leetcode-box {
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    background: #F5FBFF;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .leetcode-box h3 {
-    font-size: 16px;
-    margin: 5px 0;
-  }
-
-  .leetcode-box img {
-    max-height: 200px;
-    width: auto;
-    max-width: 100%;
-    margin: 0 auto;
-    object-fit: contain;
-  }
-.filter-btn {
-  padding: 8px 16px;
-  margin-right: 10px;
-  background-color: #306998;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-}
-
-.filter-btn.active {
-  background-color: #204d74;
-}
-
-.project-card {
-  margin-bottom: 20px;
-}
-
-    
-
-#topBtn {
-  position: fixed;
-  bottom: 40px;
-  right: 30px;
-  z-index: 99;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  background-color: #204d74;
-  color: white;
-  cursor: pointer;
-  padding: 10px 16px;
-  border-radius: 5px;
-  display: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: opacity 0.3s ease;
-}
-
-#topBtn:hover {
-  background-color: #163a5f;
-}
-
- 
-
-#home {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  background-image: url('docs/assets/dp5.jpg'); /* optional background */
-    background-size: cover;
-    background-position: center;
-  color: white;
-    
-   
-  }
-
-  .name {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  #role-text {
-    font-size: 2em;
-    font-weight: 500;
-    border-right: 2px solid white;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0ch;
-  }
-
-
   </style>
 </head>
+
 <body>
 
-  <!-- ===== TOP NAVIGATION ===== -->
-  <header class="top-header">
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#about" class="nav-link scrollto">About</a>
-      <a href="#resume" class="nav-link scrollto">Education</a>
-      <a href="#leetcode" class="nav-link scrollto">Leetcode Profile</a>
-      <a href="#work" class="nav-link scrollto">Work Sample</a>
-      <a href="#contact" class="nav-link scrollto">Contact</a>
-    </nav>
-  </header>
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <h2>Sangeetha D G</h2>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <div class="main">
-
-    <h1>Sangeetha D G</h1>
-
-    <div class="social-links mt-3 text-center">
-      <a href="https://www.linkedin.com/in/sangeetha-d-gopalrao/" class="linkedin">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="https://github.com/Sangeetha-DG" class="github">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-    </div>
-
-    <!-- ===== HOME ===== -->
-    <section id="home">
-      <h3 class="name">Sangeetha D G</h3>
-      <div class="typewriter-line">
-        <h1 id="role-text"></h1>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT ===== -->
-    <section id="about">
-      <h2 style="font-family: Verdana;">About Me</h2>
-      <p style="font-family: Arial;">
-        I am a data enthusiast seeking an entry-level Software Engineer position where I can apply my technical skills and passion for building data pipelines and working with meaningful data. I am proficient in database management, network protocols, and machine learning, with a growing interest in secure software design and threat modeling.
-      </p>
-
-      <div class="row align-items-center">
-
-        <!-- Image Column -->
-        <div class="col-lg-4 col-md-5 col-sm-12" data-aos="fade-right">
-          <img src="docs/assets/sdg.png"
-               class="img-fluid"
-               alt="Profile Picture"
-               style="width: 250px; height: auto; border-radius: 8px;">
-        </div>
-
-        <!-- Text Column -->
-        <div class="col-lg-8 col-md-7 col-sm-12">
-          <h3>Software Engineer | Data Engineer | Data Analyst</h3>
-          <ul>
-            <li><strong>Location:</strong> Jersey City, New Jersey</li>
-            <li><strong>Email:</strong> Sangeethagopalrao@gmail.com</li>
-            <li><strong>Degree:</strong> Master of Science in Computer Science</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== SKILLS ===== -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <h2 style="font-family: Verdana;">Skills</h2>
-
-        <div class="skills-columns">
-          <div class="skills-column">
-
-            <h4>Programming</h4>
-            <p>
-              <span class="tag-cloud">Python</span>
-              <span class="tag-cloud">TypeScript</span>
-              <span class="tag-cloud">JavaScript</span>
-              <span class="tag-cloud">React</span>
-              <span class="tag-cloud">Data Structures & Algorithms</span>
-              <span class="tag-cloud">SQL</span>
-              <span class="tag-cloud">PostgreSQL</span>
-            </p>
-
-            <h4>ML and AI Skills</h4>
-            <p>
-              <span class="tag-cloud">Supervised</span>
-              <span class="tag-cloud">Predictive</span>
-              <span class="tag-cloud">Unsupervised</span>
-              <span class="tag-cloud">NLP</span>
-              <span class="tag-cloud">Time Series Analysis</span>
-            </p>
-
-            <h4>Data Engineering Skills</h4>
-            <p>
-              <span class="tag-cloud">AWS</span>
-              <span class="tag-cloud">Jupyter</span>
-              <span class="tag-cloud">Hadoop</span>
-              <span class="tag-cloud">Git</span>
-              <span class="tag-cloud">JIRA</span>
-            </p>
-
-            <h4>Cloud Tools</h4>
-            <p>
-              <span class="tag-cloud">AWS S3</span>
-              <span class="tag-cloud">AWS EC2</span>
-              <span class="tag-cloud">AWS Lambda</span>
-            </p>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
+  <div class="social-links mb-3">
+    <a href="https://www.linkedin.com/in/sangeetha-d-gopalrao/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/Sangeetha-DG" target="_blank"><i class="fab fa-github"></i></a>
   </div>
 
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#resume">Education</a>
+    <a href="#leetcode">Leetcode</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</aside>
 
+<!-- ===== MAIN ===== -->
+<main class="main">
 
-    
-    <section id="resume" class="resume">
-      <div class="container">
-       
-        <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
-            <h2 style="font-family: Verdana;">Education</h2>
-            <div class="resume=item">
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="content">
-                    <h4> MASTER OF SCIENCE, COMPUTER SCIENCE </h4>
-                   <span class="tag-cloud"> GPA : 3.8, Jan 2022 - Dec 2023</span>
-                    <p><em><b> New Jersey Institute of technology</b> NJ, USA</em></p>
-                   <li>  Database management system,
-                        Data Structure and algorithm,
-                        Machine Learning,
-                        Operating System,
-                        Computer Networking,
-                        Data Mining,
-                        Introduction to BigData,</li>
-                  </div>
-                </div>
-                
-                
-                
-          </p>
-            </div>
-             <div class="resume-item">
-               <div class="timeline-item">
-                  <div class="content">
+  <!-- Home -->
+  <section id="home">
+    <div class="name">Sangeetha D G</div>
+    <div id="role-text"></div>
+  </section>
 
-                    <h4> BACHELOR OF ENGINEERING,  COMPUTER SCIENCE </h4>
-                  <span class="tag-cloud"> GPA : 7.1, June 2011 - July 2015 </span>
-                    <p><em><b> Jain Institute of Technology </b> Karntaka, India</em></p>
-                    <li>Database management system,
-                      Data Structure and algorithm,
-                      Machine Learning,
-                      Operating System,
-                      Computer Networking,
-                      Graph theory 
-                      Computer organization
-                      Compiler Design</li>
-                  </div>
-               </div>
-             </div>
-              
-             <!-- <div class="col-lg-12" data-aos="fade-up"> -->
-              <br>
-              <h2 style="font-family: Verdana;">Professional Experience</h2>
-             <div class="resume-item">
-               <div class="timeline-item">
-                <div class="content">
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a data enthusiast seeking an entry-level Software Engineer position.
+      I enjoy building data pipelines, working with machine learning models,
+      and designing secure, scalable systems.
+    </p>
+  </section>
 
-               <h4> Computer Science Tutor </h4>
-               <h5> May 2023 - Present</h5>
-               <p><em><b> Accel Learning (remote) </b> NJ,USA</em></p>
-               <ul>
-                 <li>Provided personalized tutoring in core computer science concepts both theory and practical to pre-university students, enhancing their understanding and exam readiness </li>
-                  <li> Designed and developed an interactive learning platform incorporating visual aids to simplify complex topics. Integrated advanced features such as progress tracking and
-                       performance analytics to monitor student development.</li>
-                   <li>Collected relevant resources and curated content to prepare students for competitive exams, including creating mock interviews and practice tests. Used secure storage
-                        database and retrieval of student data and test results</li>
-               </ul>
-                     </div>
-                   <h4> Technical support specialist</h4>
-                  <h5> June 2016 -Nov 2019</h5>
-                  <p><em><b> Diya Systems </b> Bangalore, Karnataka</em></p>
-                  <ul>
-                 <li>Provided Tier1 and Tier 2 Technical support to global clients via email, chat, and phone, resolving software, hardware, and network related issues. </li>
-                  <li> Diagnosed and resolved issues related to web hosting, DNS, email Configuration, and server access.</li>
-                   <li>Automated repetitive support tasks using Python scripts, reducing manual ticketing handling 25%</li>
-                    <li>Maintained detailed records of trouble shooting steps and resolution in the internal ticketing system</li>
-                    <li>Worked in a 24/7 support environment with rotating shifts ensuring SLA adherence and high customer satisfaction</li> 
-                     <li> Improved first call resolution rate by 20% through efficient troubleshooting and documentation</li>
-               </ul>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
 
-                  
-             
-               </div>
-               </div>
-          </div>
-        </div> 
+    <h4>Programming</h4>
+    <span class="tag-cloud">Python</span>
+    <span class="tag-cloud">JavaScript</span>
+    <span class="tag-cloud">TypeScript</span>
+    <span class="tag-cloud">React</span>
+    <span class="tag-cloud">SQL</span>
 
-    </section> <!-- End Resume section-->
+    <h4 class="mt-3">ML & AI</h4>
+    <span class="tag-cloud">Supervised</span>
+    <span class="tag-cloud">NLP</span>
+    <span class="tag-cloud">Time Series</span>
 
-    <!-- ===== Leetcode Section====-->
-  <section id="leetcode" class="leetcode section-bg ">
-      <div class="container">
-        <div class="section-title">
-           <h2 style="font-family: Verdana;">LeetCode Profile</h2>
-          <p> Solved more than 250 Problems on Leetcode, Demonstrated commitment to continuous learning by solving algorithmic challenges on Leetcode for 100 consecutive days</p>  
-   
+    <h4 class="mt-3">Cloud</h4>
+    <span class="tag-cloud">AWS</span>
+    <span class="tag-cloud">EC2</span>
+    <span class="tag-cloud">Lambda</span>
+  </section>
 
-         <div class="leetcode-container">
-        
-          <!-- Heatmap Card -->
-          <div class="leetcode-box">
-            <h3>LeetCode Heatmap</h3>
-            <img src="https://leetcard.jacoblin.cool/sangeethagopalrao?ext=heatmap" alt="LeetCode Heatmap" />
-          </div>
-        
-          <!-- Badge Card -->
-          <div class="leetcode-box">
-            <h3> 100-Day Streak</h3>
-            <img src="docs/assets/Ltbadge.png" alt="100 Days Badge" />
-           </div>
-        
-        </div>
-          <!-- Work sample -->
-         
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Education</h2>
+    <p><strong>MS in Computer Science</strong> — NJIT (GPA 3.8)</p>
+    <p><strong>BE in Computer Science</strong> — Jain Institute of Technology</p>
+  </section>
 
-          <section id="work">
-          
-  <div class="container">
-
-   
-      
-     <h2 style="font-family: Verdana;"> Work Samples</h2>
-      
-    <p>Explore some of the real-world projects I've built in software engineering, data analysis, and cloud computing.</p>
-          <div class="filter-buttons" style="margin-bottom: 20px;justify-content:center ;">
-  <button class="filter-btn active" data-category="all">All</button>
-  <button class="filter-btn" data-category="Machine Learning">ML</button>
-  <button class="filter-btn" data-category="networking">Networking</button>
-  <button class="filter-btn" data-category="web">Web</button>
-</div>
-    <div class="project-row" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content:flex-start ;">
-   
-     <div class="project-card" data-category="Machine Learning">
-      
-        <a href="recomendation.html">
-       
-       <span class="tag-cloud">
-          <h4 style="margin-top: 10px;">Recommendation System</h4>
-         <img src="docs/assets/youtube.jpg" alt="Work Samples Preview" class="img-fluid" style="width: 250px; border-radius: 10px;">
-       </span>
-    </a>
-     </div>
-    
-    <div class="project-card" data-category="Machine Learning">
-     <a href="food.html">
-        
-        <span class="tag-cloud">
-          <h4 style="margin-top: 10px;">Food_Stamp Analysis</h4>
-          <img src="docs/assets/fd1.png" alt="Stock App" class="img-fluid"
-            style="width: 250px; border-radius: 10px;">
-        </span>
-      </a>
+  <!-- Leetcode -->
+  <section id="leetcode">
+    <h2>Leetcode Profile</h2>
+    <div class="leetcode-container">
+      <div class="leetcode-box">
+        <h4>Heatmap</h4>
+        <img src="https://leetcard.jacoblin.cool/sangeethagopalrao?ext=heatmap" width="100%">
+      </div>
+      <div class="leetcode-box">
+        <h4>100 Day Streak</h4>
+        <img src="docs/assets/Ltbadge.png" width="100%">
+      </div>
     </div>
-  
-    <div class="project-row" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content:flex-start ;">
-    <div class="project-card" data-category="networking">
-      <a href="mp.html">
-     
-        <span class="tag-cloud">
-            <h4 style="margin-top: 10px;"> Math Protocol Server</h4>
-          <img src="docs/assets/calc.png" alt="Stock App" class="img-fluid"
-           
-            style="width: 250px; border-radius: 10px;">
-        </span>
-      </a>
-    </div>
-    
-     
-    </div>
-  </div>
-</section>
-<section id="contact" style="background-color: #f5fbff; padding: 40px 0; border-top: 1px solid #ccc;">
-  <div class="container" style="text-align: center;">
-    <h2 style="color:#204d74; border-bottom: 2px solid #204d74; display: inline-block; padding-bottom: 6px;">Follow My Work</h2>
-    <p style="margin: 15px auto; font-size: 16px; color: #333;">Explore my content and technical insights across YouTube and Medium.</p>
-    
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
-     
+  </section>
 
-      <a href="https://medium.com/@sangeethagopalrao" target="_blank">
-        <button style="background-color: #000; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer;">
-          📝 Read on Medium
-        </button>
-      </a>
-    </div>
-  </div>
-</section>
-      
-          
+  <!-- Work -->
+  <section id="work">
+    <h2>Work Samples</h2>
+    <p>Selected projects in ML, networking, and web development.</p>
+  </section>
 
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: Sangeethagopalrao@gmail.com</p>
+    <p>Location: Jersey City, NJ</p>
+  </section>
 
+  <footer>
+    © 2025 Sangeetha D G | Built with 💻 and ☕
+  </footer>
 
+</main>
 
-        
-
-          <script>
-  const buttons = document.querySelectorAll(".filter-btn");
-  const cards = document.querySelectorAll(".project-card");
-
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      // Remove active class from all
-      buttons.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      const category = btn.getAttribute("data-category");
-
-      cards.forEach(card => {
-        if (category === "all" || card.getAttribute("data-category") === category) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
-    });
-  });
-</script>
-
-         <script>
+<!-- ===== TYPEWRITER SCRIPT ===== -->
+<script>
   const roles = ["Software Engineer", "Data Engineer", "ML Enthusiast"];
   const el = document.getElementById("role-text");
-  let currentRole = 0;
+  let index = 0;
 
-  function typeWriter(text, callback) {
-    let i = 0;
-    el.innerHTML = "";
-    el.style.width = "0ch";
-    const fullText = text;
-    const typing = setInterval(() => {
-      el.innerHTML += fullText.charAt(i);
-      el.style.width = (i + 1) + "ch";
-      i++;
-      if (i === fullText.length) {
-        clearInterval(typing);
-        setTimeout(callback, 1500); // pause after typing
-      }
-    }, 100);
+  function rotateRoles() {
+    el.textContent = roles[index];
+    index = (index + 1) % roles.length;
   }
 
-  function deleteWriter(callback) {
-    let text = el.innerHTML;
-    let i = text.length;
-    const deleting = setInterval(() => {
-      el.innerHTML = text.substring(0, i - 1);
-      el.style.width = (i - 1) + "ch";
-      i--;
-      if (i === 0) {
-        clearInterval(deleting);
-        setTimeout(callback, 500); // pause before next typing
-      }
-    }, 50);
-  }
-
-  function loopRoles() {
-    typeWriter(roles[currentRole], () => {
-      deleteWriter(() => {
-        currentRole = (currentRole + 1) % roles.length;
-        loopRoles();
-      });
-    });
-  }
-
-  loopRoles();
+  rotateRoles();
+  setInterval(rotateRoles, 2000);
 </script>
 
-
-<section id="contact" class="contact section-bg section-divider" style="background-color: #35495e; color: white; padding: 40px 0;">
-  <div class="container">
-    <div class="section-title">
-      <h2 style="color: white;">Contact</h2>
-    </div>
-    <div class="col-lg-5 d-flex align-items-stretch">
-      <div class="info" style="color: white; font-size: 16px;">
-        <div class="address mb-3">
-          <h4><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>Location:</h4>
-          <p>Jersey City, NJ</p>
-        </div>
-        <div class="email">
-          <h4><i class="fas fa-envelope" style="margin-right: 8px;"></i>Email:</h4>
-          <p>Sangeethagopalrao@gmail.com</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
-    <footer>
-      <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑ Top</button>
-     
-
-
-
-
-
-
-
-
-
-
-
-      <p>© 2025 Sangeetha D G | Built with 💻 and ☕</p>
-      
-    </footer>
-
-  </div>
 </body>
 </html>
