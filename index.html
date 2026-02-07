@@ -68,7 +68,6 @@
     /* Home */
     #home {
       height: 100vh;
-     
       color: black;
       display: flex;
       flex-direction: column;
@@ -80,6 +79,7 @@
     .name {
       font-size: 2.5rem;
       font-weight: bold;
+      margin-bottom: 10px;
     }
 
     #role-text {
@@ -131,23 +131,31 @@
       background: #204d74;
     }
 
+    /* Footer */
     footer {
       background: #35495e;
       color: white;
       text-align: center;
       padding: 1rem;
     }
+
+    /* Spacing before About Me */
+    #about {
+      margin-top: 2rem;
+    }
   </style>
 </head>
 
 <body>
 
+<!-- ===== NAME AT TOP ===== -->
+<div style="position: fixed; top: 0; left: 260px; width: calc(100% - 260px); background: #f9f9f9; padding: 1rem 2rem; z-index: 1000; font-size: 1.5rem; font-weight: bold; border-bottom: 1px solid #ccc;">
+  Sangeetha D G
+</div>
+
 <!-- ===== SIDEBAR ===== -->
 <aside class="sidebar">
- 
-
   <div class="social-links mb-3">
-     <h2>Sangeetha D G</h2>
     <a href="https://www.linkedin.com/in/sangeetha-d-gopalrao/" target="_blank"><i class="fab fa-linkedin"></i></a>
     <a href="https://github.com/Sangeetha-DG" target="_blank"><i class="fab fa-github"></i></a>
   </div>
@@ -164,7 +172,7 @@
 </aside>
 
 <!-- ===== MAIN ===== -->
-<main class="main">
+<main class="main" style="padding-top: 3rem;">
 
   <!-- Home -->
   <section id="home">
